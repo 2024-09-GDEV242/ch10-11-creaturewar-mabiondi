@@ -47,8 +47,8 @@ public abstract class Creature
      * @return a value between 1 and str to be used to cause damage to another creature
      */
     public int attack(){
-        // TODO: implement a damage method
-        return 0;
+        int damage = Randomizer.nextInt(str);
+        return damage;
     }
     
     

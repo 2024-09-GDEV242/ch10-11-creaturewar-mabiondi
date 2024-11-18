@@ -69,6 +69,13 @@ public abstract class Creature
         return hp <= 0;
     }
     
+    /**
+     * Returns the current HP of the creature
+     * @return current HP of the creature
+     */
+    public int getHealth() {
+        return hp;
+    }
     
     /**
      * takeDamage receives a value for the amount of damage to subtract from 

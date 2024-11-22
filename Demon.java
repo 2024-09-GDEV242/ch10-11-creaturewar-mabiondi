@@ -19,7 +19,7 @@ public abstract class Demon extends Creature
      * Overrides the Creature attack() with a special "magic attack"
      * that has a 5% chance of doing +50 damage.
      *
-     * @return value between 1 and str to be used to cause damage to another creature
+     * @return value to be used to cause damage to another creature
      */
     @Override
     public int attack()

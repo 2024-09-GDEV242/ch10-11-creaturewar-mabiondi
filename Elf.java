@@ -16,7 +16,7 @@ public class Elf extends Creature
     /**
      * Constructor for objects of class Elf
      */
-    public Elf(int str, int hp)
+    public Elf()
     {
         super(    
             Randomizer.nextInt(MAX_ELF_STR-MIN_ELF_STR)+MIN_ELF_STR,

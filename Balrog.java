@@ -15,7 +15,7 @@ public class Balrog extends Demon
     /**
      * Constructor for objects of class Balrog
      */
-    public Balrog(int str, int hp)
+    public Balrog()
     {
         super(    
             Randomizer.nextInt(MAX_BALROG_STR-MIN_BALROG_STR)+MIN_BALROG_STR,

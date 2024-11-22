@@ -1,12 +1,11 @@
 
 /**
- * A super class for demon creatures.
- * This class should never be instantiated directly.
+ * A super class for demon creatures, implementing the special Demon Magic attack.
  *
  * @author Michael Biondi
  * @version 2024-11 v1.0
  */
-public class Demon extends Creature
+public abstract class Demon extends Creature
 {
     /**
      * Constructor for objects of class Demon

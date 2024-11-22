@@ -6,7 +6,7 @@
  * Implements a maximum/minimum hitpoint total for the creature type [25/5]
  * 
  * @author Bill Crosbie, updated by Michael Biondi
- * @version 2024-11 v1.0
+ * @version 2024-11 v1.1
  */
 public class Human extends Creature
 {

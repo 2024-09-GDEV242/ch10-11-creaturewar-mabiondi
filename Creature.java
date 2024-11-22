@@ -7,8 +7,8 @@
  * the creature is alive or knocked out. The creature is also responsible for calculating
  * damage delivered based on the creature's strength (1 to str) 
  * 
- * @author Crosbie
- * @version 2020-10 v1.0
+ * @author Crosbie, updated by Michael Biondi
+ * @version 2024-11 v1.1
  */
 // we will learn what the abstract keyword does in a later chapter
 public abstract class Creature
@@ -37,7 +37,9 @@ public abstract class Creature
      * @param hp the health of the creature at the start of the simulation, and the current health levels during battle
      */
     public Creature (int str, int hp) {
-       //implement this
+       this.str = str;
+       this.hp = hp;
+       max_hp = hp;
     }
     
     
@@ -46,8 +48,8 @@ public abstract class Creature
      * @return a value between 1 and str to be used to cause damage to another creature
      */
     public int attack(){
-        // TODO: implement a damage method
-        return 0;
+        int damage = Randomizer.nextInt(str);
+        return damage;
     }
     
     
@@ -56,8 +58,7 @@ public abstract class Creature
      * @return true when current hit point level is greater than zero
      */
     public boolean isAlive() {
-        // TODO: implement a method to report if the creature yet lives
-        return false; //change this
+        return hp > 0;
     }
     
     /**
@@ -65,10 +66,16 @@ public abstract class Creature
      * @return true when current hit point level is less than or equal to zero
      */
     public boolean isKnockedOut() {
-        //TODO: implement a method to report if the creature has been killed
-        return false; //change this
+        return hp <= 0;
     }
     
+    /**
+     * Returns the current HP of the creature
+     * @return current HP of the creature
+     */
+    public int getHealth() {
+        return hp;
+    }
     
     /**
      * takeDamage receives a value for the amount of damage to subtract from 
@@ -76,7 +83,7 @@ public abstract class Creature
      * @param damage value to remove from hit point count
      */
     public void takeDamage(int damage) {
-        // TODO: implement this
+        hp -= damage;
     }
     
 }

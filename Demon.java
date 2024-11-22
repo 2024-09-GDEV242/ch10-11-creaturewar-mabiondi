@@ -25,6 +25,11 @@ public class Demon extends Creature
     @Override
     public int attack()
     {
-        return 0;
+        int damage = super.attack();
+        int random = Randomizer.nextInt(100);
+        if (random <= 5) {
+            damage += 50;
+        }
+        return damage;
     }
 }

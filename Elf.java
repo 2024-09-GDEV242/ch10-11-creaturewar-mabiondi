@@ -1,9 +1,10 @@
 
 /**
- * Write a description of class Elf here.
+ * An Elf, a subclass of Creature with
+ * a special overridden attack() using elf magic.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Michael Biondi
+ * @version 2024-11 v1.0
  */
 public class Elf extends Creature
 {

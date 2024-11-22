@@ -39,4 +39,23 @@ public class HumanUnitTest
     public void tearDown()
     {
     }
+    
+    /**
+     * Tests instantiating a new Human, checking whether they are alive or knocked out, and attacking.
+     */
+    @Test
+    public void testAttack() {
+        Human john = new Human();
+        
+        assertEquals(true, john.isAlive());
+        assertEquals(false, john.isKnockedOut());
+        
+        int attack = john.attack();
+        assertEquals(true, attack > 0);
+        
+        john.takeDamage(1000);
+        
+        assertEquals(false, john.isAlive());
+        assertEquals(true, john.isKnockedOut());
+    }
 }
